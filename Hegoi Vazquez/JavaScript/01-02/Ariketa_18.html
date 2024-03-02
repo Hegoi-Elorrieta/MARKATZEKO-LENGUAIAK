@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Hamazortzigarren scripta</title>
+
+</head>
+
+<body>
+    <script>
+        
+        function palindromoak(str){
+            let kate1;
+            let kate2;
+
+            kate1 = str.toLowerCase().replaceAll(" ","");
+            kate2 = kate1.split("").reverse().join("");
+
+            if (kate1 == kate2){
+                window.alert("Palindromoa da.");}
+            else{
+                window.alert("Ez da palindromoa.");}
+        }
+
+        let str = window.prompt("Idatzi esaldi bat.");
+        palindromoak(str);
+
+    </script>
+</body>
+
+</html>

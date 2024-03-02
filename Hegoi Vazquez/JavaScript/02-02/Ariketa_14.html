@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tablas de Multiplicar y Divisiones</title>
+</head>
+<body>
+
+  <label for="numeroInput">Ingresa un número:</label>
+  <input type="text" id="numeroInput">
+  <br><br>
+  
+  <button onclick="generarTabla('multiplicacion')">Generar Tabla de Multiplicación</button>
+  <button onclick="generarTabla('division')">Generar Tabla de Divisiones</button>
+  <br><br>
+
+  <div id="resultado"></div>
+
+  <script>
+    function generarTabla(operacion) {
+      // Obtener el número ingresado
+      var numero = parseFloat(document.getElementById('numeroInput').value);
+
+      // Verificar si el número ingresado es válido
+      if (isNaN(numero)) {
+        alert("Ingresa un número válido");
+        return;
+      }
+
+      // Inicializar la tabla
+      var tabla = '<h2>Tabla de ' + (operacion === 'multiplicacion' ? 'Multiplicación' : 'Divisiones') + ' del ' + numero + '</h2><ul>';
+
+      // Generar la tabla hasta 10
+      for (var i = 1; i <= 10; i++) {
+        if (operacion === 'multiplicacion') {
+          tabla += '<li>' + numero + ' x ' + i + ' = ' + (numero * i) + '</li>';
+        } else if (operacion === 'division') {
+          tabla += '<li>' + numero + ' / ' + i + ' = ' + (numero / i) + '</li>';
+        }
+      }
+
+      // Cerrar la lista
+      tabla += '</ul>';
+
+      // Mostrar el resultado en la página
+      document.getElementById('resultado').innerHTML = tabla;
+    }
+  </script>
+
+</body>
+</html>

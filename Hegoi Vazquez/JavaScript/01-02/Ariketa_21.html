@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Hogeitabata scripta</title>
+
+</head>
+
+<body>
+    <script>
+        
+        function errepikatu(str){
+            
+            let kate = str.replace(" ","");
+            let cont;
+
+            for (let i = 0; i < kate.length; i++){
+                cont = 0;
+                for (let j = 0; j < kate.length; j++){
+                    if (kate.charAt(i) == kate.charAt(j)){
+                        cont ++;
+                    }
+                }
+
+                if (cont < 2){
+                return kate.charAt(i);
+            }
+        }
+        }
+
+        let str = window.prompt("Sartu hitz bat.");
+        window.alert(errepikatu(str));
+
+    </script>
+</body>
+
+</html>

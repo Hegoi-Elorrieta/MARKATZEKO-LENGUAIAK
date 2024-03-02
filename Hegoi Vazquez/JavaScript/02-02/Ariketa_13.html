@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contador de Entradas</title>
+</head>
+<body>
+
+  <label for="inputText">Escribe algo:</label>
+  <input type="text" id="inputText" oninput="actualizarContador()">
+
+  <p>Contador: <span id="contador">0</span></p>
+
+  <script>
+    // Función para actualizar el contador
+    function actualizarContador() {
+      // Obtener el valor del campo de texto
+      var texto = document.getElementById('inputText').value;
+
+      // Contar la longitud del texto
+      var contador = texto.length;
+
+      // Actualizar el contador en la página
+      document.getElementById('contador').innerText = contador;
+    }
+  </script>
+
+</body>
+</html>

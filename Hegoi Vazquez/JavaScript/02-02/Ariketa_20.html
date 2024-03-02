@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Conversor de Moneda</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin: 50px;
+    }
+  </style>
+</head>
+<body>
+
+<h1>Conversor de Moneda</h1>
+
+<label for="euro">Cantidad en Euros:</label>
+<input type="number" id="euro" placeholder="Ingrese cantidad en Euros" />
+<button onclick="convertirMoneda()">Convertir</button>
+
+<br><br>
+
+<label for="dolar">Dólares estadounidenses:</label>
+<input type="text" id="dolar" readonly />
+
+<br><br>
+
+<label for="libra">Libras:</label>
+<input type="text" id="libra" readonly />
+
+<br><br>
+
+<label for="yen">Yenes:</label>
+<input type="text" id="yen" readonly />
+
+<script>
+  function convertirMoneda() {
+    var euroInput = document.getElementById('euro');
+    var dolarInput = document.getElementById('dolar');
+    var libraInput = document.getElementById('libra');
+    var yenInput = document.getElementById('yen');
+
+    var euro = parseFloat(euroInput.value);
+
+    // Tasa de cambio aproximada (a modo de ejemplo)
+    var tasaDolar = 1.12;
+    var tasaLibra = 0.85;
+    var tasaYen = 120.35;
+
+    var dolar = euro * tasaDolar;
+    var libra = euro * tasaLibra;
+    var yen = euro * tasaYen;
+
+    dolarInput.value = dolar.toFixed(2) + ' USD';
+    libraInput.value = libra.toFixed(2) + ' GBP';
+    yenInput.value = yen.toFixed(2) + ' JPY';
+  }
+</script>
+
+</body>
+</html>

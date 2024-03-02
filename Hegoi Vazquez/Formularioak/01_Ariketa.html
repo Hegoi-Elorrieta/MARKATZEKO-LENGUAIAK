@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="eu">
+
+<head>
+    <title>Saturnora Bidaia</title>
+    <meta charset="UTF-8">
+    <meta content="author" content="zure_izena">
+    <meta content="keywords" content="bidaia Saturno Trans Planet">
+    <meta name="viewport" content="width=device-width, initialscale=1.0">
+</head>
+
+<body>
+    <header>
+        <h1>Trans Planet Airlines</h1>
+        <img src="https://www.vippng.com/png/full/548-5483891_saturno-los-anillos-de-saturno-planeta-universo-transparent.png" alt="Saturno" />
+    </header>
+    <div id="container">
+        <div id="nagusia">
+            <form action="#.php" method="get">
+
+                <!--Izen Abizenak TEXT-->
+                <label for="fullname">Izen Abizenak</label>
+                <input type="text" name="fullname" id="fullname" placeholder="Hegoi Vazquez Jimenez">
+                <br>
+                <br>
+
+                <!--Emaila EMAIL -->
+                <label for="mail">Gmail</label>
+                <input type="email" name="mail" id="mail" placeholder="adibide@gmail.com">
+                <br>
+                <br>
+
+                <!--Jaiotze data DATE -->
+                <label for="jaiotzedata">Jaiotze data</label>
+                <input type="date" name="jaiotzedata" id="jaiotzedata" max="2005-12-31">
+                <br>
+                <br>
+
+                <!--Gehigarriak-->
+                <!--Checkbox-->
+                <details>
+                    <p>Zein planeta bizitatu duzu jada?</p>
+                    <input type="checkbox" name="planetak" id="planeta_1" value="artizarra">
+                    <label for="planeta_1">Artizarra</label>
+                    <br>
+                    <input type="checkbox" name="planetak" id="planeta_2" value="marte">
+                    <label for="planeta_2">Marte</label>
+                    <br>
+                    <input type="checkbox" name="planetak" id="planeta_3" value="jupiter">
+                    <label for="planeta_3">Jupiter</label>
+
+                    <label for="saturno_ezaugarriak">Zerk erakartzen zaizu gehien<label>
+                    <select size="1" multiple name="saturno_ezaugarriak">
+                        <option value=""></option>
+                        <option value="koloreak">Bere koloreak</option>
+                        <option value="tamaina">Tamaina</option>
+                    </select>
+
+                </details>
+                <br>
+                <br>
+
+                <!--TEstu luzea TEXTAREA-->
+                <label for="aurkezpena">Aurkeztu zure burua 1000 karaktere baino gutxiagotan</label>
+                <br>
+                <textarea name="aurkezpena" id="aurkezpena" cols="100" rows="10" maxlength="1000"></textarea>
+                <br>
+                <br>
+
+                <!--botoiak-->
+                <input type="submit" name="datuak_bidali" id="datuak_bidali">
+                <button type="submit" name="datuak_bidali">Bidali</button>
+
+            </form>
+        </div>
+    </div>
+    <footer>
+    </footer>
+</body>
+
+</html>

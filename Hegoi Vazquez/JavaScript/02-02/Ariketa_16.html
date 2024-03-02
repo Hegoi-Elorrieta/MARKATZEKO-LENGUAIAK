@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora</title>
+</head>
+<body>
+
+  <label for="numero1">Número 1:</label>
+  <input type="text" id="numero1">
+  <br><br>
+
+  <label for="numero2">Número 2:</label>
+  <input type="text" id="numero2">
+  <br><br>
+
+  <label>Operación:</label>
+  <input type="radio" name="operacion" value="suma" checked> Suma
+  <input type="radio" name="operacion" value="resta"> Resta
+  <input type="radio" name="operacion" value="multiplicacion"> Multiplicación
+  <input type="radio" name="operacion" value="division"> División
+  <br><br>
+
+  <button onclick="calcularResultado()">Calcular Resultado</button>
+  <button onclick="resetearFormulario()">Resetear Formulario</button>
+  <br><br>
+
+  <div id="resultado"></div>
+
+  <script>
+    function calcularResultado() {
+      // Obtener los números ingresados
+      var num1 = parseFloat(document.getElementById('numero1').value);
+      var num2 = parseFloat(document.getElementById('numero2').value);
+
+      // Verificar si los números ingresados son válidos
+      if (isNaN(num1) || isNaN(num2)) {
+        alert("Ingresa números válidos");
+        return;
+      }
+
+      // Obtener la operación seleccionada
+      var operacion = document.querySelector('input[name="operacion"]:checked').value;
+
+      // Realizar la operación
+      var resultado;
+      switch (operacion) {
+        case 'suma':
+          resultado = num1 + num2;
+          break;
+        case 'resta':
+          resultado = num1 - num2;
+          break;
+        case 'multiplicacion':
+          resultado = num1 * num2;
+          break;
+        case 'division':
+          if (num2 !== 0) {
+            resultado = num1 / num2;
+          } else {
+            alert("No se puede dividir por cero");
+            return;
+          }
+          break;
+        default:
+          alert("Selecciona una operación");
+          return;
+      }
+
+      // Mostrar el resultado en la página
+      document.getElementById('resultado').innerText = 'Resultado: ' + resultado;
+    }
+
+    function resetearFormulario() {
+      // Limpiar los campos de texto y el resultado
+      document.getElementById('numero1').value = '';
+      document.getElementById('numero2').value = '';
+      document.getElementById('resultado').innerText = '';
+    }
+  </script>
+
+</body>
+</html>

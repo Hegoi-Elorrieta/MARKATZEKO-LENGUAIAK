@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Hogeigarrem scripta</title>
+
+</head>
+
+<body>
+    <script>
+        
+        function lehenak(zbk){
+            
+            if (zbk <= 1){
+                return false;
+            }
+
+            for(let i = 2; i<zbk; i++){
+                if (zbk % i == 0){
+                    return false;
+                }
+            }
+            return true;
+        }
+
+        let zbk = window.prompt("Sartu zenbaki bat.");
+        document.write(lehenak(zbk)?"Lehena da.":"Ez da lehena.");
+        /**/
+
+    </script>
+</body>
+
+</html>

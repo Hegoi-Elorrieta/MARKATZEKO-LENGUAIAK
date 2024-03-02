@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hogeitabi ariketa</title>
+</head>
+<body>
+
+  <script>
+    function HitzBilaketa(srt) {
+      // Obtener el texto ingresado por el usuario
+      var texto = document.getElementById("").value;
+
+      // Obtener la palabra a buscar
+      var bilatuHitza = document.getElementById("searchWord").value;
+
+      // Obtener la hora actual
+      var DataOrdua = new Date();
+      var orduBilaketa = DataOrdua.getHours() + ":" + DataOrdua.getMinutes() + ":" + DataOrdua.getSeconds();
+
+      // Buscar la palabra y obtener la posición de la primera ocurrencia
+      var posicion = testua.indexOf(bilatuHitza);
+
+      // Mostrar los resultados
+      var emaitza = document.getElementById("result");
+      emaitza.innerHTML = "";
+
+      if (posicion !== -1) {
+        emaitza.innerHTML += "<p>La palabra '" + bilatuHitza + "' aparece por primera vez en la posición " + posicion + ".</p>";
+      } else {
+        emaitza.innerHTML += "<p>La palabra '" + bilatuHitza + "' no fue encontrada en el texto.</p>";
+      }
+
+      emaitza.innerHTML += "<p>Búsqueda realizada a las " + orduBilaketa + ".</p>";
+    }
+
+    let str = window.prompt("Sartu esaldi bat:");
+    document.write(HitzBilaketa(str));
+
+  </script>
+</body>
+</html>
