@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="demo">Este es un párrafo de ejemplo.</p>
+    <button onclick="cambiarTexto()">Cambiar Texto</button>
+    <button onclick="volverTexto()">Volve al texto antiguo.</button>
+
+    <script>
+        function cambiarTexto() {
+            var elemento = document.getElementById("demo");
+            elemento.textContent = "El texto ha sido cambiado!";
+        }
+
+        function volverTexto() {
+            var elemento = document.getElementById("demo");
+            elemento.textContent = "Este es un parrafo de ejemplo."
+        }
+    </script>
+</body>
+</html>
