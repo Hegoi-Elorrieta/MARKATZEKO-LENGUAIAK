@@ -3,7 +3,7 @@
     <ikaslea nan="11111111L" errepikatzailea="false" jaiotze-data="2005-11-17">
         <izena>Iraide Etxeberria</izena>
         <helbidea>
-            <kalea>Kale nagusia</kalea>
+            <kalea mota="2">Kale nagusia</kalea>
             <zbk>5</zbk>
             <herria postaKodea="48004">Bilbao</herria>
             <probintzia>Bizkaia</probintzia>
@@ -13,7 +13,7 @@
     <ikaslea nan="22222222L" errepikatzailea="false" jaiotze-data="2005-11-17">
         <izena>Joseba Mikel Zarraga</izena>
         <helbidea>
-            <kalea>Gorbeia</kalea>
+            <kalea mota="1">Gorbeia</kalea>
             <zbk>75</zbk>
             <herria postaKodea="48001">Artea</herria>
             <probintzia>Bizkaia</probintzia>
