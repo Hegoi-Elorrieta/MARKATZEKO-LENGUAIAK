@@ -23,9 +23,9 @@
                             </xs:choice>
                             <xs:element name="eposta" type="xs:integer" minOccurs="0"></xs:element>
                         </xs:sequence>
-                        <xs:attribute name="nan" type="xs:integer"></xs:attribute>
+                        <xs:attribute name="nan" type="xs:integer" use="required"></xs:attribute>
                         <xs:attribute name="errepikatzailea" type="xs:boolean"></xs:attribute>
-                        <xs:attribute name="jaiotze-data" type="xs:date"></xs:attribute>
+                        <xs:attribute name="jaiotze-data" type="xs:date" use="required"></xs:attribute>
                     </xs:complexType>
                 </xs:element>
             </xs:sequence>

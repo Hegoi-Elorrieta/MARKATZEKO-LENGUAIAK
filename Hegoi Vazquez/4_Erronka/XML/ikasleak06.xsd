@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<!--Datu moten definizioa-->
+<xs:simpleType name="mugikorrazbk">
+    <xs:restriction base="xs:integer">
+        <xs:totalDigits value="9"></xs:totalDigits>
+    </xs:restriction>
+</xs:simpleType>
+<xs:simpleType name="herrikaraktere">
+    <xs:restriction base="xs:string">
+        <xs:maxLength value="50"></xs:maxLength>
+    </xs:restriction>
+</xs:simpleType>
+<xs:complexType name="helbidedatua">
+    <xs:sequence>
+        <xs:element name="kalea">
+            <xs:simpleType>
+                <xs:restriction base="xs:string">
+                    <xs:maxLength value="100"></xs:maxLength>
+                </xs:restriction>
+            </xs:simpleType>
+        </xs:element>
+        <xs:element name="zbk">
+            <xs:simpleType>
+                <xs:restriction base="xs:integer">
+                    <xs:minInclusive value="1"></xs:minInclusive>                    
+                    <xs:maxInclusive value="1000"></xs:maxInclusive>
+                </xs:restriction>
+            </xs:simpleType>
+        </xs:element>
+        <xs:element name="herria" type="herrikaraktere">
+        </xs:element>
+        <xs:element name="probintzia" type="herrikaraktere">
+        </xs:element>
+    </xs:sequence>
+</xs:complexType>
+    <xs:element name="ikasleak">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="ikaslea" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="izena" type="xs:string"></xs:element>
+                            <xs:element name="helbidea" type="helbidedatua"></xs:element>
+                            <xs:choice>
+                                <xs:element name="telefonoa" type="mugikorrazbk">
+                                </xs:element>
+                                <xs:element name="mugikorra" maxOccurs="3" type="mugikorrazbk">
+                                </xs:element>
+                            </xs:choice>
+                            <xs:element name="eposta" type="xs:integer" minOccurs="0"></xs:element>
+                        </xs:sequence>
+                        <xs:attribute name="nan" use="required">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:pattern value="\d{8}[A-Z]"></xs:pattern>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:attribute>
+                        <xs:attribute name="errepikatzailea" type="xs:boolean"></xs:attribute>
+                        <xs:attribute name="jaiotze-data" type="xs:date" use="required"></xs:attribute>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>
