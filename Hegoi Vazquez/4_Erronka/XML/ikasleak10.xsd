@@ -21,6 +21,13 @@
         </xs:restriction>
     </xs:simpleType>
 
+<xs:complexType name="familia">
+    <xs:sequence>
+        <xs:element name="izena" type="xs:string"></xs:element>
+        <xs:element name="telefonoa" type="xs:integer"></xs:element>
+    </xs:sequence>
+</xs:complexType>
+
 <!--Datu moten definizioa amaitu-->
 
 <xs:complexType name="helbidedatua">
@@ -29,7 +36,18 @@
             <xs:complexType>
                 <xs:simpleContent>
                     <xs:extension base="herrikaraktere">
-                        <xs:attribute name="mota" type="xs:integer"></xs:attribute>
+                        <xs:attribute name="mota">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="kalea"></xs:enumeration>
+                                    <xs:enumeration value="errepidea"></xs:enumeration>
+                                    <xs:enumeration value="bidea"></xs:enumeration>
+                                    <xs:enumeration value="plaza"></xs:enumeration>
+                                    <xs:enumeration value="etorbidea"></xs:enumeration>
+                                    <xs:enumeration value="zeharbidea"></xs:enumeration>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:attribute>
                     </xs:extension>
                 </xs:simpleContent>
             </xs:complexType>
@@ -68,6 +86,10 @@
                                 <xs:element name="mugikorra" maxOccurs="3" type="mugikorrazbk"></xs:element>
                             </xs:choice>
                                 <xs:element name="eposta" type="xs:integer" minOccurs="0"></xs:element>
+                                <xs:choice minOccurs="0" maxOccurs="2">
+                                    <xs:element name="ama" minOccurs="0" maxOccurs="2" type="familia"></xs:element>
+                                    <xs:element name="aita" minOccurs="0" maxOccurs="2" type="familia"></xs:element>
+                                </xs:choice>
                                 <xs:element name="elbarritasuna" minOccurs="0">
                             <xs:complexType>
                                     <xs:attribute name="gradua" use="required">

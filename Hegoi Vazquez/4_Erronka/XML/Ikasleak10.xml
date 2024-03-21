@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ikasleak xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="ikasleak10.xsd">
+    <ikaslea nan="11111111L" errepikatzailea="false" jaiotze-data="2005-11-17">
+        <izena>Iraide Etxeberria</izena>
+        <helbidea>
+            <kalea mota="etorbidea">Kale nagusia</kalea>
+            <zbk>5</zbk>
+            <herria postaKodea="48004">Bilbao</herria>
+            <probintzia>Bizkaia</probintzia>
+        </helbidea>
+        <telefonoa>944000000</telefonoa>
+    </ikaslea>
+    <ikaslea nan="22222222L" errepikatzailea="false" jaiotze-data="2005-11-17">
+        <izena>Joseba Mikel Zarraga</izena>
+        <helbidea>
+            <kalea mota="etorbidea">Gorbeia</kalea>
+            <zbk>75</zbk>
+            <herria postaKodea="48001">Artea</herria>
+            <probintzia>Bizkaia</probintzia>
+        </helbidea>
+        <mugikorra>944999999</mugikorra>
+        <mugikorra>666777888</mugikorra>
+        <ama>
+            <izena>Marisa</izena>
+            <telefonoa>999444333</telefonoa>
+        </ama>
+        <aita>
+            <izena>Iñaki</izena>
+            <telefonoa>999444332</telefonoa>
+        </aita>
+        <aita>
+            <izena>Iñaki</izena>
+            <telefonoa>999444332</telefonoa>
+        </aita>
+        
+    </ikaslea>
+</ikasleak>
